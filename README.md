@@ -1,4 +1,4 @@
-# MultiplexGT
+# Multiplex
 This repository contains R programs for "Hou, P., Tebbs, J., Wang, D., McMahan, C., and Bilder, C. (2018). Array testing with multiplex assays." A shiny app of these programs can be accessed from the following link https://dwang.shinyapps.io/MultiGTSiM/
 
 To run the code: Download the files ArrayMultiplex.R, Array.cpp, and Hierarchical.cpp to your computer. 
