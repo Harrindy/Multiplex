@@ -168,7 +168,7 @@ Table2
 
 
 ############################################################################################
-# Reproduce Table 3 in the paper.
+# Reproduce Table 3 in the paper and Figure E.1 in the supplementary.
 Table3=SHL.data[rep(1:4,rep(3,4)),c(1,6)]
 row.names(Table3)=1:12
 ############################################################################################
@@ -201,6 +201,7 @@ FS.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FS.H2
+res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
 set.seed(10)
@@ -217,6 +218,7 @@ FS.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FS.H3
+res.H3=res
 
 set.seed(10)
 res<-AT_SIM(size=size,p=Prevalence,SE=sensitivity,SP=specificity,row=opt[[3]][1],col=opt[[3]][1],iter=5000)
@@ -232,7 +234,17 @@ FS.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FS.AT
-
+res.AT=res
+par(mar=c(4.5,5,4,2))
+boxplot(cbind(res.H2$'Number of tests'/size,
+              res.AT$'Number of tests'/size,
+              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
+        ylab = "", cex.lab=1.8)
+title(main="Female Swab", font.main=1,cex.main=1.8)
+mtext(text = "Number of tests per individual",
+      side = 2,
+      cex=1.8,
+      line = 3.5)
 ###################################################################
 # Reproduce results related to the stratum "Female Urine."
 
@@ -264,6 +276,7 @@ FU.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FU.H2
+res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
 set.seed(10)
@@ -280,6 +293,7 @@ FU.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FU.H3
+res.H3=res
 
 set.seed(10)
 res<-AT_SIM(size=size,p=Prevalence,SE=sensitivity,SP=specificity,row=opt[[3]][1],col=opt[[3]][1],iter=5000)
@@ -295,7 +309,17 @@ FU.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FU.AT
-
+res.AT=res
+par(mar=c(4.5,5,4,2))
+boxplot(cbind(res.H2$'Number of tests'/size,
+              res.AT$'Number of tests'/size,
+              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
+        ylab = "", cex.lab=1.8)
+title(main="Female Urine", font.main=1,cex.main=1.8)
+mtext(text = "Number of tests per individual",
+      side = 2,
+      cex=1.8,
+      line = 3.5)
 ###################################################################
 # Reproduce results related to the stratum "Male Swab."
 
@@ -327,6 +351,7 @@ MS.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MS.H2
+res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
 set.seed(10)
@@ -343,6 +368,7 @@ MS.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MS.H3
+res.H3=res
 
 set.seed(10)
 res<-AT_SIM(size=size,p=Prevalence,SE=sensitivity,SP=specificity,row=opt[[3]][1],col=opt[[3]][1],iter=5000)
@@ -358,7 +384,17 @@ MS.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MS.AT
-
+res.AT=res
+par(mar=c(4.5,5,4,2))
+boxplot(cbind(res.H2$'Number of tests'/size,
+              res.AT$'Number of tests'/size,
+              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
+        ylab = "", cex.lab=1.8)
+title(main="Male Swab", font.main=1,cex.main=1.8)
+mtext(text = "Number of tests per individual",
+      side = 2,
+      cex=1.8,
+      line = 3.5)
 ###################################################################
 # Reproduce results related to the stratum "Male Urine."
 
@@ -390,6 +426,7 @@ MU.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MU.H2
+res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
 set.seed(10)
@@ -406,6 +443,7 @@ MU.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MU.H3
+res.H3=res
 
 set.seed(10)
 res<-AT_SIM(size=size,p=Prevalence,SE=sensitivity,SP=specificity,row=opt[[3]][1],col=opt[[3]][1],iter=5000)
@@ -421,6 +459,17 @@ MU.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MU.AT
+res.AT=res
+par(mar=c(4.5,5,4,2))
+boxplot(cbind(res.H2$'Number of tests'/size,
+              res.AT$'Number of tests'/size,
+              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
+        ylab = "", cex.lab=1.8)
+title(main="Male Urine", font.main=1,cex.main=1.8)
+mtext(text = "Number of tests per individual",
+      side = 2,
+      cex=1.8,
+      line = 3.5)
 
 Table3=cbind(Table3,rbind(FS.H2,FS.AT,FS.H3,FU.H2,FU.AT,FU.H3,MS.H2,MS.AT,MS.H3,MU.H2,MU.AT,MU.H3))
 colnames(Table3)=c("Stratum","Total","Algorithm","Mean","SD","EFF","PSE1","PSE2","PSP1","PSP2","PPV1","PPV2","NPV1","NPV2")
