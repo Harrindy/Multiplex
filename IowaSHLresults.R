@@ -158,7 +158,7 @@ Table2$hat_p10[ind]=Prevalence[2]
 Table2$hat_p01[ind]=Prevalence[3]
 Table2$hat_p11[ind]=Prevalence[4]
 ##################################################
-# Finished reproducing Table 2 in the paper.
+# Reproducing Table 2 in the paper is finished.
 Table2
 ##################################################
 
@@ -471,9 +471,11 @@ mtext(text = "Number of tests per individual",
       cex=1.8,
       line = 3.5)
 
+##################################################
+# Save results to Table 3.
 Table3=cbind(Table3,rbind(FS.H2,FS.AT,FS.H3,FU.H2,FU.AT,FU.H3,MS.H2,MS.AT,MS.H3,MU.H2,MU.AT,MU.H3))
 colnames(Table3)=c("Stratum","Total","Algorithm","Mean","SD","EFF","PSE1","PSE2","PSP1","PSP2","PPV1","PPV2","NPV1","NPV2")
 ##################################################
-# Finished reproducing Table 3 in the paper.
+# Reproducing Table 3 in the paper is finished.
 Table3
 ##################################################
