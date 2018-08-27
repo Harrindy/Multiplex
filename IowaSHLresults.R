@@ -70,7 +70,7 @@ OPT.H_VS_A<-function(p,SE,SP,MAMPS,n_at,n_atm){
 ############################################################################################
 # Read the data.
 library(utils)
-SHL.data=read.csv("IowaSHLdata.csv",col.names =c("stratum","CT_N,NG_N","CT_P,NG_N","CT_N,NG_P","CT_P,NG_P","Total",
+SHL.data=read.csv("IowaSHLdata.csv",col.names =c("Stratum","CT_N,NG_N","CT_P,NG_N","CT_N,NG_P","CT_P,NG_P","Total",
                                                  "Se1","Sp1","Se2","Sp2"))
 ############################################################################################
 # Reproduce Table 2 in the paper.
@@ -423,7 +423,7 @@ MU.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
 MU.AT
 
 Table3=cbind(Table3,rbind(FS.H2,FS.AT,FS.H3,FU.H2,FU.AT,FU.H3,MS.H2,MS.AT,MS.H3,MU.H2,MU.AT,MU.H3))
-colnames(Table3)=c("stratum","Total","Algorithm","Mean","SD","EFF","PSE1","PSE2","PSP1","PSP2","PPV1","PPV2","NPV1","NPV2")
+colnames(Table3)=c("Stratum","Total","Algorithm","Mean","SD","EFF","PSE1","PSE2","PSP1","PSP2","PPV1","PPV2","NPV1","NPV2")
 ##################################################
 # Finished reproducing Table 3 in the paper.
 Table3
