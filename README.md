@@ -3,12 +3,12 @@ This repository contains R programs for the article, “Array testing with multi
 
 To run the code: 
 
-    1. Download the files ArrayMultiplex.R, Array.cpp, and Hierarchical.cpp to your computer. 
-    2. Open R (or Rstudio) and make sure that R (or Rstudio) can access the Rcpp files Array.cpp and Hierarchical.cpp.
+    1. Download the files ArrayMultiplex.R, Array.cpp, and Hierarchical.cpp.
+    2. Open R (or Rstudio) and make sure that R (or Rstudio) can access the two Rcpp files.
     3. Run ArrayMultiplex.R.
 
 To reproduce the analysis (Tables 2 and 3) in the real data example (Section 5) of this article:
 
-    1. Download the files IowaSHLdata.csv (this is the data file), IowaSHLresults.R, Array.cpp, and Hierarchical.cpp to your computer. 
-    2. Open R (or Rstudio) and make sure that R (or Rstudio) can access the Rcpp files, Array.cpp and Hierarchical.cpp, and the data file IowaSHLdata.csv.
+    1. Download the files IowaSHLdata.csv (this is the data file), IowaSHLresults.R, Array.cpp, and Hierarchical.cpp.
+    2. Open R (or Rstudio) and make sure that R (or Rstudio) can access the two Rcpp files and the data file.
     3. Run IowaSHLresults.R.
