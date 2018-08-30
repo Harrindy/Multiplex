@@ -235,16 +235,20 @@ FS.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FS.AT
 res.AT=res
-par(mar=c(4.5,5,4,2))
-boxplot(cbind(res.H2$'Number of tests'/size,
+
+par(mar=c(6.1,6.1,4.1,2.1))
+
+res.box=cbind(res.H2$'Number of tests'/size,
               res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
-        ylab = "", cex.lab=1.8)
-title(main="Female Swab", font.main=1,cex.main=1.8)
-mtext(text = "Number of tests per individual",
-      side = 2,
-      cex=1.8,
-      line = 3.5)
+              res.H3$'Number of tests'/size)
+boxplot(res.box[,1],res.box[,2],res.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)#, xlab = "Algorithm", names=c("H2", "AT", "H3"),
+#ylab = "", cex.lab=1.8)
+
+mtext("Algorithm",side=1,line=4.5,cex=1.5)
+mtext("Number of tests per individual",side=2,line=4.5,cex=1.5)
+mtext("Female Swab",side=3,cex=1.5,line=1.5)
+box()
+axis(1,at=c(1,2,3),labels=c("H2","AT","H3"),tck=-0.01,cex.axis=1.4)
 ###################################################################
 # Reproduce results related to the stratum "Female Urine."
 
@@ -310,16 +314,20 @@ FU.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 FU.AT
 res.AT=res
-par(mar=c(4.5,5,4,2))
-boxplot(cbind(res.H2$'Number of tests'/size,
+
+par(mar=c(6.1,6.1,4.1,2.1))
+
+res.box=cbind(res.H2$'Number of tests'/size,
               res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
-        ylab = "", cex.lab=1.8)
-title(main="Female Urine", font.main=1,cex.main=1.8)
-mtext(text = "Number of tests per individual",
-      side = 2,
-      cex=1.8,
-      line = 3.5)
+              res.H3$'Number of tests'/size)
+boxplot(res.box[,1],res.box[,2],res.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)#, xlab = "Algorithm", names=c("H2", "AT", "H3"),
+#ylab = "", cex.lab=1.8)
+
+mtext("Algorithm",side=1,line=4.5,cex=1.5)
+mtext("Number of tests per individual",side=2,line=4.5,cex=1.5)
+mtext("Female Urine",side=3,cex=1.5,line=1.5)
+box()
+axis(1,at=c(1,2,3),labels=c("H2","AT","H3"),tck=-0.01,cex.axis=1.4)
 ###################################################################
 # Reproduce results related to the stratum "Male Swab."
 
@@ -385,16 +393,20 @@ MS.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MS.AT
 res.AT=res
-par(mar=c(4.5,5,4,2))
-boxplot(cbind(res.H2$'Number of tests'/size,
+
+par(mar=c(6.1,6.1,4.1,2.1))
+
+res.box=cbind(res.H2$'Number of tests'/size,
               res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
-        ylab = "", cex.lab=1.8)
-title(main="Male Swab", font.main=1,cex.main=1.8)
-mtext(text = "Number of tests per individual",
-      side = 2,
-      cex=1.8,
-      line = 3.5)
+              res.H3$'Number of tests'/size)
+boxplot(res.box[,1],res.box[,2],res.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)#, xlab = "Algorithm", names=c("H2", "AT", "H3"),
+#ylab = "", cex.lab=1.8)
+
+mtext("Algorithm",side=1,line=4.5,cex=1.5)
+mtext("Number of tests per individual",side=2,line=4.5,cex=1.5)
+mtext("Male Swab",side=3,cex=1.5,line=1.5)
+box()
+axis(1,at=c(1,2,3),labels=c("H2","AT","H3"),tck=-0.01,cex.axis=1.4)
 ###################################################################
 # Reproduce results related to the stratum "Male Urine."
 
@@ -460,16 +472,21 @@ MU.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
 MU.AT
 res.AT=res
-par(mar=c(4.5,5,4,2))
-boxplot(cbind(res.H2$'Number of tests'/size,
+
+par(mar=c(6.1,6.1,4.1,2.1))
+
+res.box=cbind(res.H2$'Number of tests'/size,
               res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size),range=0,xaxes=F,cex.axis=1.5,col="grey", xlab = "Algorithm", names=c("H2", "AT", "H3"),
-        ylab = "", cex.lab=1.8)
-title(main="Male Urine", font.main=1,cex.main=1.8)
-mtext(text = "Number of tests per individual",
-      side = 2,
-      cex=1.8,
-      line = 3.5)
+              res.H3$'Number of tests'/size)
+boxplot(res.box[,1],res.box[,2],res.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)#, xlab = "Algorithm", names=c("H2", "AT", "H3"),
+        #ylab = "", cex.lab=1.8)
+
+mtext("Algorithm",side=1,line=4.5,cex=1.5)
+mtext("Number of tests per individual",side=2,line=4.5,cex=1.5)
+mtext("Male Urine",side=3,cex=1.5,line=1.5)
+box()
+axis(1,at=c(1,2,3),labels=c("H2","AT","H3"),tck=-0.01,cex.axis=1.4)
+
 
 ##################################################
 # Save results to Table 3.
