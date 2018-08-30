@@ -1,6 +1,6 @@
 ############################################################################################
 ############################################################################################
-# This R program reproduces the results (Tables 2 and 3) in Section 5 of the manuscript 
+# This R program reproduces the results (Tables 2-3 and Figure E.1) in the data example of 
 #                 "Array testing with multiplex assays."                                                                          
 ############################################################################################
 ############################################################################################
@@ -68,7 +68,7 @@ OPT.H_VS_A<-function(p,SE,SP,MAMPS,n_at,n_atm){
 ############################################################################################
 # Real data analysis
 ############################################################################################
-# Read the data.
+# Read data from the data file (please ignore the warning).
 library(utils)
 SHL.data=read.csv("IowaSHLdata.csv",col.names =c("Stratum","CT_N,NG_N","CT_P,NG_N","CT_N,NG_P","CT_P,NG_P","Total",
                                                  "Se1","Sp1","Se2","Sp2"))
