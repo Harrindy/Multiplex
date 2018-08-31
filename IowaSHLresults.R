@@ -463,7 +463,7 @@ Table3
 
 
 ########################################################################
-# Reproduce Table E.1 in the paper
+# Reproduce Table E.1 in the supplementary materials.
 TableE1=SHL.data[rep(1:4,rep(3,4)),c(1,6)]
 
 ind=1
@@ -512,6 +512,8 @@ TableE1
 
 #################################################################
 # Reproduce Figure E.1 in the supplementary materials.
+# Figure E.1 will be saved in a pdf file named "FigureE1.pdf"
+
 pdf("FigureE1.pdf", width=12,height=16) 
 par(mfrow=c(2,2))
 par(mar=c(6.1,6.1,4.1,2.1))
