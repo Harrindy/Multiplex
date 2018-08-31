@@ -1,6 +1,6 @@
 ############################################################################################
 ############################################################################################
-# This R program reproduces the results (Tables 2-3 and Figure E.1) in the data example of 
+# This R program reproduces results (Tables 2-3, E.1, and Figure E.1) in the data example of 
 #                 "Array testing with multiplex assays."                                                                          
 ############################################################################################
 ############################################################################################
@@ -165,10 +165,8 @@ Table2
 
 
 
-
-
 ############################################################################################
-# Reproduce Table 3 in the paper and Figure E.1 in the supplementary.
+# Reproduce Table 3 in the paper
 Table3=SHL.data[rep(1:4,rep(3,4)),c(1,6)]
 row.names(Table3)=1:12
 ############################################################################################
@@ -462,8 +460,58 @@ Table3
 ##################################################
 
 
-########################################################################################
-# The following commands can reproduce the four subfigures in Figure E.1 of the article.
+
+
+########################################################################
+# Reproduce Table E.1 in the paper
+TableE1=SHL.data[rep(1:4,rep(3,4)),c(1,6)]
+
+ind=1
+opt=opt.FS
+TableE1$Algorithm[(ind-1)*3+1]=paste("H2(",opt[[1]][1,1],":",opt[[1]][1,2],")",sep="")
+TableE1$Algorithm[(ind-1)*3+2]=paste("AT(",opt[[3]][1],"*",opt[[3]][1],")",sep="")
+TableE1$Algorithm[(ind-1)*3+3]=paste("H3(",opt[[1]][2,1],":",opt[[1]][2,2],":",opt[[1]][2,3],")",sep="")
+accu.FS=formatC(rbind(opt[[2]][1,],
+                      opt[[4]][1,],
+                      opt[[2]][2,]),digit=3, format="f")
+
+ind=2
+opt=opt.FU
+TableE1$Algorithm[(ind-1)*3+1]=paste("H2(",opt[[1]][1,1],":",opt[[1]][1,2],")",sep="")
+TableE1$Algorithm[(ind-1)*3+2]=paste("AT(",opt[[3]][1],"*",opt[[3]][1],")",sep="")
+TableE1$Algorithm[(ind-1)*3+3]=paste("H3(",opt[[1]][2,1],":",opt[[1]][2,2],":",opt[[1]][2,3],")",sep="")
+accu.FU=formatC(rbind(opt[[2]][1,],
+                      opt[[4]][1,],
+                      opt[[2]][2,]),digit=3, format="f")
+
+ind=3
+opt=opt.MS
+TableE1$Algorithm[(ind-1)*3+1]=paste("H2(",opt[[1]][1,1],":",opt[[1]][1,2],")",sep="")
+TableE1$Algorithm[(ind-1)*3+2]=paste("AT(",opt[[3]][1],"*",opt[[3]][1],")",sep="")
+TableE1$Algorithm[(ind-1)*3+3]=paste("H3(",opt[[1]][2,1],":",opt[[1]][2,2],":",opt[[1]][2,3],")",sep="")
+accu.MS=formatC(rbind(opt[[2]][1,],
+                      opt[[4]][1,],
+                      opt[[2]][2,]),digit=3, format="f")
+
+ind=4
+opt=opt.MU
+TableE1$Algorithm[(ind-1)*3+1]=paste("H2(",opt[[1]][1,1],":",opt[[1]][1,2],")",sep="")
+TableE1$Algorithm[(ind-1)*3+2]=paste("AT(",opt[[3]][1],"*",opt[[3]][1],")",sep="")
+TableE1$Algorithm[(ind-1)*3+3]=paste("H3(",opt[[1]][2,1],":",opt[[1]][2,2],":",opt[[1]][2,3],")",sep="")
+accu.MU=formatC(rbind(opt[[2]][1,],
+                      opt[[4]][1,],
+                      opt[[2]][2,]),digit=3, format="f")
+
+TableE1=cbind(TableE1,rbind(accu.FS,accu.FU,accu.MS,accu.MU))
+colnames(TableE1)=c("Stratum","Total","Algorithm","EFF","PSE1","PSE2","PSP1","PSP2","PPV1","PPV2","NPV1","NPV2")
+row.names(TableE1)=1:12
+#################################################################
+# Reproducing Table E.1 in the supplmentary materials is finished.
+TableE1
+#################################################################              
+
+#############################################################################
+# Reproduce the four subfigures of Figure E.1 in the supplementary materials.
 pdf("FemaleSwab.pdf", width=6,height=8) 
 par(mar=c(6.1,6.1,4.1,2.1))
 boxplot(FS.box[,1],FS.box[,2],FS.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)
