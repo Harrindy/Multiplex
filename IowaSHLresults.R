@@ -198,7 +198,6 @@ FS.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-FS.H2
 res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
@@ -215,7 +214,6 @@ FS.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-FS.H3
 res.H3=res
 
 set.seed(10)
@@ -231,12 +229,11 @@ FS.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-FS.AT
 res.AT=res
 
 FS.box=cbind(res.H2$'Number of tests'/size,
-              res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size)
+             res.AT$'Number of tests'/size,
+             res.H3$'Number of tests'/size)
 
 ###################################################################
 # Reproduce results related to the stratum "Female Urine."
@@ -268,7 +265,6 @@ FU.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-FU.H2
 res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
@@ -285,7 +281,6 @@ FU.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-FU.H3
 res.H3=res
 
 set.seed(10)
@@ -301,12 +296,11 @@ FU.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-FU.AT
 res.AT=res
 
 FU.box=cbind(res.H2$'Number of tests'/size,
-              res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size)
+             res.AT$'Number of tests'/size,
+             res.H3$'Number of tests'/size)
 
 ###################################################################
 # Reproduce results related to the stratum "Male Swab."
@@ -338,7 +332,6 @@ MS.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-MS.H2
 res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
@@ -355,7 +348,6 @@ MS.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-MS.H3
 res.H3=res
 
 set.seed(10)
@@ -371,12 +363,11 @@ MS.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-MS.AT
 res.AT=res
 
 MS.box=cbind(res.H2$'Number of tests'/size,
-              res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size)
+             res.AT$'Number of tests'/size,
+             res.H3$'Number of tests'/size)
 
 
 
@@ -410,7 +401,6 @@ MU.H2=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-MU.H2
 res.H2=res
 
 ns = c(opt[[1]][2,1],opt[[1]][2,2],opt[[1]][2,3])
@@ -427,7 +417,6 @@ MU.H3=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-MU.H3
 res.H3=res
 
 set.seed(10)
@@ -443,12 +432,11 @@ MU.AT=c(round(mean(res$'Number of tests')),round(sd(res$'Number of tests')),
         formatC(mean(res$'PPV2'),digit=3,format="f"),
         formatC(mean(res$'NPV1'),digit=3,format="f"),
         formatC(mean(res$'NPV2'),digit=3,format="f"))
-MU.AT
 res.AT=res
 
 MU.box=cbind(res.H2$'Number of tests'/size,
-              res.AT$'Number of tests'/size,
-              res.H3$'Number of tests'/size)
+             res.AT$'Number of tests'/size,
+             res.H3$'Number of tests'/size)
 
 ##################################################
 # Save results to Table 3.
