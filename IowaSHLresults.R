@@ -510,9 +510,10 @@ row.names(TableE1)=1:12
 TableE1
 #################################################################              
 
-#############################################################################
-# Reproduce the four subfigures of Figure E.1 in the supplementary materials.
-pdf("FemaleSwab.pdf", width=6,height=8) 
+#################################################################
+# Reproduce Figure E.1 in the supplementary materials.
+pdf("FigureE1.pdf", width=12,height=16) 
+par(mfrow=c(2,2))
 par(mar=c(6.1,6.1,4.1,2.1))
 boxplot(FS.box[,1],FS.box[,2],FS.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)
 mtext("Algorithm",side=1,line=4.5,cex=1.5)
@@ -520,9 +521,7 @@ mtext("Number of tests per individual",side=2,line=4.5,cex=1.5)
 mtext("Female Swab",side=3,cex=1.5,line=1.5)
 box()
 axis(1,at=c(1,2,3),labels=c("H2","AT","H3"),tck=-0.01,cex.axis=1.4)
-dev.off()
 
-pdf("FemaleUrine.pdf", width=6,height=8) 
 par(mar=c(6.1,6.1,4.1,2.1))
 boxplot(FU.box[,1],FU.box[,2],FU.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)
 mtext("Algorithm",side=1,line=4.5,cex=1.5)
@@ -530,9 +529,7 @@ mtext("Number of tests per individual",side=2,line=4.5,cex=1.5)
 mtext("Female Urine",side=3,cex=1.5,line=1.5)
 box()
 axis(1,at=c(1,2,3),labels=c("H2","AT","H3"),tck=-0.01,cex.axis=1.4)
-dev.off()
 
-pdf("MaleSwab.pdf", width=6,height=8) 
 par(mar=c(6.1,6.1,4.1,2.1))
 boxplot(MS.box[,1],MS.box[,2],MS.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)
 mtext("Algorithm",side=1,line=4.5,cex=1.5)
@@ -540,9 +537,7 @@ mtext("Number of tests per individual",side=2,line=4.5,cex=1.5)
 mtext("Male Swab",side=3,cex=1.5,line=1.5)
 box()
 axis(1,at=c(1,2,3),labels=c("H2","AT","H3"),tck=-0.01,cex.axis=1.4)
-dev.off()
 
-pdf("MaleUrine.pdf", width=6,height=8) 
 par(mar=c(6.1,6.1,4.1,2.1))
 boxplot(MU.box[,1],MU.box[,2],MU.box[,3],range=0,cex.axis=1.5,col="grey",xaxes=F)
 mtext("Algorithm",side=1,line=4.5,cex=1.5)
